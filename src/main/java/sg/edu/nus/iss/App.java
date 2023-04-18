@@ -12,5 +12,8 @@ public class App
         bankAccount1.withdraw((20.51f));
 
         System.out.println(bankAccount1.toString());
+        
+        bankAccount1.getTransactions();
+
     }
 }

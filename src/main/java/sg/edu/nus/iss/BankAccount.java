@@ -18,6 +18,7 @@ public class BankAccount {
         this.accountNumber = accountNumber;
         this.accountBalance = 0.0f;
 
+        this.createdDate = new Date();
         transactions = new ArrayList<>();
     }
 
@@ -27,6 +28,7 @@ public class BankAccount {
         this.accountBalance = accountBalance;
         this.closed = false;
 
+        this.createdDate = new Date();
         transactions = new ArrayList<>();
     }
 
@@ -80,6 +82,8 @@ public class BankAccount {
 
     public void setClosed(Boolean closed) {
         this.closed = closed;
+
+        this.closedDate = new Date();
     }
 
 
