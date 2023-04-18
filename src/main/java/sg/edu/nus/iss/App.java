@@ -8,6 +8,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        BankAccount bankAccount1 = new BankAccount("Russell Chin", "12345678", (float) 939.58);
+        bankAccount1.withdraw((20.51f));
+
+        System.out.println(bankAccount1.toString());
     }
 }
