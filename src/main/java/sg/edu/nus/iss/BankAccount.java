@@ -22,6 +22,11 @@ public class BankAccount {
         transactions = new ArrayList<>();
     }
 
+    public BankAccount(String fullName, Float accountBalance) {
+        this.fullName = fullName;
+        this.accountBalance = accountBalance;
+    }
+
     public BankAccount(String fullName, String accountNumber, Float accountBalance) {
         this.fullName = fullName;
         this.accountNumber = accountNumber;
@@ -139,6 +144,12 @@ public class BankAccount {
         return "BankAccount [fullName=" + fullName + ", accountNumber=" + accountNumber + ", accountBalance="
                 + accountBalance + ", transactions=" + transactions + ", closed=" + closed + ", createdDate="
                 + createdDate + ", closedDate=" + closedDate + "]";
+    }
+
+    public void showAccount(){
+        System.out.println("Account fullname :"+ fullName);
+        System.out.println("Account No. "+ accountNumber);
+        System.out.println("Balance: " + accountBalance);
     }
 
 }
