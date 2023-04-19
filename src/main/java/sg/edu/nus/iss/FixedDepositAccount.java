@@ -92,13 +92,24 @@ public class FixedDepositAccount extends BankAccount{
         this.monthsDurationChanged = monthsDurationChanged;
     }
     public Float getAccountBalance() {
-        return accountBalance;
+        return super.getAccountBalance()*(100+interest*monthsDuration/12)/100;
     }
     // commenting away the setAccountBalance so that it cannot be changed anymore once it is set?
     // public void setAccountBalance(float accountBalance) {
     //     this.accountBalance = accountBalance;
     // }
 
+    @Override
+    public void deposit(float amount) {
+        super.deposit(amount);
+        System.out.println("No Deposit Operation allowed.");
+    }
+
+    @Override
+    public void withdraw(float withdrawalAmount) {
+        super.withdraw(withdrawalAmount);
+        System.out.println("No Withdrawal Operation allowed.");
+    }
     
 
 }

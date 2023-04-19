@@ -43,7 +43,7 @@ public class BankAccount {
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
         this.transactions = transactions;
-        this.closed = closed;
+
         this.createdDate = createdDate;
         this.closedDate = closedDate;
         this.closed = false;
@@ -113,7 +113,7 @@ public class BankAccount {
 
 
     public void deposit(float amount){
-        if (closed){
+        if (this.closed){
             throw new IllegalArgumentException("Account is closed");
         }
 
@@ -127,7 +127,7 @@ public class BankAccount {
     }
 
     public void withdraw(float withdrawalAmount){
-        if (closed){
+        if (this.closed){
             throw new IllegalArgumentException("Account is closed");
         }
         if (withdrawalAmount > accountBalance){
